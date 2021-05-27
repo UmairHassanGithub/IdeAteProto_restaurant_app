@@ -1,0 +1,35 @@
+﻿<Window x:Class="IdeAteProto.test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IdeAteProto"
+        mc:Ignorable="d"
+        Title="test" Height="450" Width="800">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="24.667"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,163.333,3.667">
+            <Button x:Name="addRectangleButton" Content="Add Rectngle" Click="addRectangleButton_Click"/>
+        </StackPanel>
+
+        <Canvas Grid.Row="1" x:Name="canvas" Margin="0,12.333,163.333,-0.333">
+            <ListBox Height="75" Canvas.Left="657" Canvas.Top="14" x:Name="order">
+                <ListBoxItem Content="Pasta --- $14.99" FontFamily="Century"/>
+            </ListBox>
+            <Rectangle x:Name="alfredo" HorizontalAlignment="Left" Height="78" Stroke="Black" VerticalAlignment="Top" Width="80" RadiusY="20" RadiusX="20" MouseDown="rectangle_MouseDown" MouseMove="rectangle_MouseMove" MouseUp="rectangle_MouseUp" Canvas.Left="335" Canvas.Top="88">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="alfredo.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Canvas>
+
+    </Grid>
+</Window>
